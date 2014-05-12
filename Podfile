@@ -1,3 +1,3 @@
-platform :ios, '6.0'
+platform :ios, '6.1'
 pod 'ChatHeads', '~> 1.0'
 
