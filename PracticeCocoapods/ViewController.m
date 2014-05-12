@@ -25,5 +25,11 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+- (IBAction)buttonAction:(id)sender {
+    NSURL *url = [NSURL URLWithString:@"http://song.logdown.com/posts/197786"];
+    
+    if ([[UIApplication sharedApplication] canOpenURL:url])
+        [[UIApplication sharedApplication] openURL:url];
+}
 
 @end
