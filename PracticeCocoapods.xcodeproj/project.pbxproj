@@ -21,6 +21,7 @@
 		376084AA1920CEC4004B0D3B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3760848C1920CEC3004B0D3B /* UIKit.framework */; };
 		376084B21920CEC4004B0D3B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 376084B01920CEC4004B0D3B /* InfoPlist.strings */; };
 		376084B41920CEC4004B0D3B /* PracticeCocoapodsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 376084B31920CEC4004B0D3B /* PracticeCocoapodsTests.m */; };
+		376084CB1920E587004B0D3B /* cocoapods.png in Resources */ = {isa = PBXBuildFile; fileRef = 376084CA1920E587004B0D3B /* cocoapods.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		376084AF1920CEC4004B0D3B /* PracticeCocoapodsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PracticeCocoapodsTests-Info.plist"; sourceTree = "<group>"; };
 		376084B11920CEC4004B0D3B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		376084B31920CEC4004B0D3B /* PracticeCocoapodsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PracticeCocoapodsTests.m; sourceTree = "<group>"; };
+		376084CA1920E587004B0D3B /* cocoapods.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cocoapods.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 		3760848E1920CEC3004B0D3B /* PracticeCocoapods */ = {
 			isa = PBXGroup;
 			children = (
+				376084CA1920E587004B0D3B /* cocoapods.png */,
 				376084971920CEC3004B0D3B /* AppDelegate.h */,
 				376084981920CEC3004B0D3B /* AppDelegate.m */,
 				3760849A1920CEC3004B0D3B /* Main.storyboard */,
@@ -159,9 +162,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 376084B71920CEC4004B0D3B /* Build configuration list for PBXNativeTarget "PracticeCocoapods" */;
 			buildPhases = (
+				92A96C1439B14D718D621D24 /* Check Pods Manifest.lock */,
 				376084811920CEC3004B0D3B /* Sources */,
 				376084821920CEC3004B0D3B /* Frameworks */,
 				376084831920CEC3004B0D3B /* Resources */,
+				BA74D96CE5CE4CA595099DF6 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -231,6 +236,7 @@
 				376084A11920CEC3004B0D3B /* Images.xcassets in Resources */,
 				376084931920CEC3004B0D3B /* InfoPlist.strings in Resources */,
 				3760849C1920CEC3004B0D3B /* Main.storyboard in Resources */,
+				376084CB1920E587004B0D3B /* cocoapods.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,6 +249,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		92A96C1439B14D718D621D24 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BA74D96CE5CE4CA595099DF6 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		376084811920CEC3004B0D3B /* Sources */ = {
@@ -456,6 +495,7 @@
 				376084B91920CEC4004B0D3B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		376084BA1920CEC4004B0D3B /* Build configuration list for PBXNativeTarget "PracticeCocoapodsTests" */ = {
 			isa = XCConfigurationList;
@@ -464,6 +504,7 @@
 				376084BC1920CEC4004B0D3B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

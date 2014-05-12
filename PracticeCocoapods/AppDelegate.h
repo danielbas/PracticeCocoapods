@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CHDraggingCoordinator.h"
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate, CHDraggingCoordinatorDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-
+@property (strong, nonatomic) CHDraggingCoordinator *draggingCoordinator;
 @end
